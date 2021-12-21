@@ -1,10 +1,13 @@
 import { ActionTree, ActionContext } from 'vuex'
 
 import { State } from './state'
-import { Mutations, Mutation } from './mutations'
+import {
+  Mutations
+  // Mutation
+} from './mutations'
 
 export enum Action {
-  initApp = 'initApp',
+  initApp = 'initApp'
 }
 
 type AugmentedActionContext = {
@@ -19,7 +22,8 @@ export interface Actions {
 }
 
 export const actions: ActionTree<State, State> & Actions = {
-  [Action.initApp]({ state, commit, dispatch }) {
+  [Action.initApp]() // { state, commit, dispatch }
+  {
     console.log('app inited!')
-  },
+  }
 }

@@ -14,5 +14,5 @@ export const state: State = {
   debug: import.meta.env.MODE === 'development',
   version: versionString,
   isInitialized: false,
-  count: 0,
+  count: 0
 }

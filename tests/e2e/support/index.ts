@@ -22,10 +22,12 @@ Cypress.on('window:before:load', (win) => {
     return fetch(request.url, {
       method: request.method,
       headers: request.requestHeaders,
-      body: request.requestBody,
+      body: request.requestBody
     }).then((res) => {
       const content =
-        res.headers.map['content-type'] === 'application/json' ? res.json() : res.text()
+        res.headers.map['content-type'] === 'application/json'
+          ? res.json()
+          : res.text()
       return new Promise((resolve) => {
         content.then((body) => resolve([res.status, res.headers, body]))
       })

@@ -7,14 +7,14 @@ const routes = [
     path: '/',
     component: Index,
     meta: {
-      title: 'ERA2140 Wallet Test',
-    },
-  },
+      title: 'ERA2140 Wallet Test'
+    }
+  }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
 
 export default router

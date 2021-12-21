@@ -1,3 +1,3 @@
-export enum CryptoCurrencyEnum{
-    ETH= `ETH`,
+export enum CryptoCurrencyEnum {
+  ETH = `ETH`
 }
