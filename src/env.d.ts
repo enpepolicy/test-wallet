@@ -11,7 +11,13 @@ interface ImportMetaEnv extends Readonly<Record<string, string>> {
   // Only string type here to avoid hard to debug cast problems in your components!
   readonly VITE_APP_VERSION: string
   readonly VITE_APP_BUILD_EPOCH?: string
+  readonly VITE_APP_CONVERSION_RATE_API?: string
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv
+}
+
+interface Window {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ethereum: any
 }

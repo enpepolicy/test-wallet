@@ -1,29 +1,70 @@
 <template>
-  <div>
-    <hr />
-    <h2>Wallet test</h2>
-    <p>
-      Write a function that allow user to connect his metamask wallet on the
-      ethereum network to our app when he click on connect button.<br />
-      If the user has already connected his wallet you should hide the connect
-      button and display the list of his accounts with the account balance in
-      ETH.<br />
-      You must get the account list only once on connection and save them on
-      your state (store).<br />
-      Finally, the user should be able to see the amount of each account in
-      USDT. You can use
-      <a href="https://coinmarketcap.com/">coinmarketcap</a> API to get the
-      conversion rate.<br />
-    </p>
-    <button class="bg-green-800 text-white p-2 rounded" @click="connect()">
-      connect
-    </button>
-  </div>
+  <form
+    class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
+  >
+    <div class="flex items-center justify-center pt-2">
+      <div
+        v-if="currentAccount"
+        class="border-2 border-green-500/80 text-white/80 font-bold py-2 px-4 rounded w-full h-12 leading-7 overflow-hidden"
+      >
+        <span class="pr-7 text-green-500">Connected:</span
+        >{{ truncateAddress(currentAccount) }}
+      </div>
+
+      <button
+        v-else
+        class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out w-full h-12"
+        type="button"
+        @click.prevent="connect"
+      >
+        Connect Your Wallet
+      </button>
+    </div>
+
+    <h2 class="text-center font-medium py-3">or enter an address:</h2>
+
+    <add-single-address />
+  </form>
 </template>
-<script setup lang="ts">
-async function connect() {
-  // have fun
-}
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { truncateAddress } from '@/utils'
+import AddSingleAddress from '@/components/AddSingleAddress.vue'
+
+import {
+  connect,
+  currentAccount,
+  initializeWallet,
+  removeWindowEthereumListeners
+} from '@/composables/useWallet'
+
+export default defineComponent({
+  name: 'ConnectWalleet',
+
+  components: {
+    AddSingleAddress
+  },
+
+  setup() {
+    return {
+      currentAccount,
+      connect
+    }
+  },
+
+  mounted: function () {
+    initializeWallet()
+  },
+
+  beforeUnmount: function () {
+    removeWindowEthereumListeners()
+  },
+
+  methods: {
+    truncateAddress
+  }
+})
 </script>
 
 <style scoped>
