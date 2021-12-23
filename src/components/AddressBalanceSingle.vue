@@ -7,10 +7,10 @@
       class="w-5 h-5 bg-green-700 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"
     ></div>
 
-    <!-- Line that connecting the box with the vertical line -->
+    <!-- Line connecting the box with the vertical line -->
     <div class="w-10 h-1 bg-blue-300 absolute -left-10 z-0"></div>
 
-    <!-- Content that showing in the box -->
+    <!-- Content showing in the box -->
     <div class="flex-auto">
       <h3 class="text-md font-bold">
         {{ detailedAccount.address }}
@@ -21,22 +21,36 @@
         {{ `${formatPrice(detailedAccount.balanceInFiat, 2)} ` }}
         <span class="font-bold">USDT</span>
       </h3>
+      <span
+        v-if="currentAccount === detailedAccount.address"
+        class="hidden sm:inline absolute rounded-full my-auto py-1 px-2 font-bold text-green-600 right-2 bottom-2 border-2 border-green-600"
+      >
+        CONNECTED
+      </span>
     </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { formatPrice } from '@/utils'
+
 import { DetailedAccount } from '@/application/entity/types'
+import { currentAccount } from '@/composables/useWallet'
 
 export default defineComponent({
   props: {
     detailedAccount: {
       type: Object as PropType<DetailedAccount>,
+      default: () => ({})
+    }
+  },
+  setup() {
+    return {
+      currentAccount
     }
   },
   methods: {
     formatPrice
-  },
+  }
 })
 </script>
