@@ -7,7 +7,8 @@
         v-if="currentAccount"
         class="border-2 border-green-500/80 text-white/80 font-bold py-2 px-4 rounded w-full h-12 leading-7 overflow-hidden"
       >
-        <span class="pr-7 text-green-500">{{ t('components.connect-wallet.connected') }}:</span
+        <span class="pr-7 text-green-500"
+          >{{ t('components.connect-wallet.connected') }}:</span
         >{{ truncateAddress(currentAccount) }}
       </div>
 
@@ -21,7 +22,9 @@
       </button>
     </div>
 
-    <h2 class="text-center font-medium py-3">{{ t('components.connect-wallet.or-enter-an-address') }}:</h2>
+    <h2 class="text-center font-medium py-3">
+      {{ t('components.connect-wallet.or-enter-an-address') }}:
+    </h2>
 
     <add-single-address />
   </form>
