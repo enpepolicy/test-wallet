@@ -7,7 +7,7 @@
         v-if="currentAccount"
         class="border-2 border-green-500/80 text-white/80 font-bold py-2 px-4 rounded w-full h-12 leading-7 overflow-hidden"
       >
-        <span class="pr-7 text-green-500">Connected:</span
+        <span class="pr-7 text-green-500">{{ t('components.connect-wallet.connected') }}:</span
         >{{ truncateAddress(currentAccount) }}
       </div>
 
@@ -17,11 +17,11 @@
         type="button"
         @click.prevent="connect"
       >
-        Connect Your Wallet
+        {{ t('components.connect-wallet.connect-your-wallet') }}
       </button>
     </div>
 
-    <h2 class="text-center font-medium py-3">or enter an address:</h2>
+    <h2 class="text-center font-medium py-3">{{ t('components.connect-wallet.or-enter-an-address') }}:</h2>
 
     <add-single-address />
   </form>
@@ -29,6 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { truncateAddress } from '@/utils'
 import AddSingleAddress from '@/components/AddSingleAddress.vue'
 
@@ -47,7 +48,9 @@ export default defineComponent({
   },
 
   setup() {
+    const { t } = useI18n()
     return {
+      t,
       currentAccount,
       connect
     }

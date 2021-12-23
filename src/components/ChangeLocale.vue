@@ -1,7 +1,7 @@
 <template lang="">
   <div class="mx-auto md:pt-16">
     <p class="text-blue-400 font-bold pb-8 lg:pb-1 text-center">
-      Not your language?
+      {{ t('components.change-locale.not-your-language-question') }}
     </p>
     <div
       class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in"

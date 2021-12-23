@@ -9,11 +9,10 @@
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500"
           >2140 Test
-          {{ t('views.sections.affiliates.base-section-heading-title') }}</span
-        >
+        </span>
       </a>
 
-      <div class="flex w-1/3 justify-end content-center">
+      <div class="flex w-1/2 md:w-1/3 justify-end content-center">
         <span
           :class="
             currentNetworkId === 0
@@ -26,7 +25,7 @@
         >
           {{
             currentNetworkId === 0
-              ? 'No Chain Connected'
+              ? t('layouts.app-nav.no-chain')
               : String(NetworkEnum[currentNetworkId]).split('_').join(' ')
           }}
         </span>

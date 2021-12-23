@@ -25,12 +25,13 @@
         v-if="currentAccount === detailedAccount.address"
         class="hidden sm:inline absolute rounded-full my-auto py-1 px-2 font-bold text-green-600 right-2 bottom-2 border-2 border-green-600"
       >
-        CONNECTED
+        {{ t('components.address-balance-single.connected') }}
       </span>
     </div>
   </div>
 </template>
 <script lang="ts">
+import { useI18n } from 'vue-i18n'
 import { defineComponent, PropType } from 'vue'
 import { formatPrice } from '@/utils'
 
@@ -45,7 +46,9 @@ export default defineComponent({
     }
   },
   setup() {
+    const { t } = useI18n()
     return {
+      t,
       currentAccount
     }
   },

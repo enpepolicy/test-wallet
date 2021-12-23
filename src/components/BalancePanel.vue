@@ -9,7 +9,9 @@
         v-if="walletDetailedSnapshot.detailedAccounts.length > 0"
         class="pb-5"
       >
-        <h2 class="pb-6 text-white/90">ADDRESS HISTORY</h2>
+        <h2 class="pb-6 text-white/90">
+          {{ t('components.balance-panel.address-history') }}
+        </h2>
         <div class="w-12/12 mx-auto relative">
           <div class="border-l-2">
             <address-balance-single
@@ -24,31 +26,37 @@
       </div>
 
       <div v-else class="flex text-xl font-bold text-center h-full">
-        <h5 class="align-middle m-auto">No address history</h5>
+        <h5 class="align-middle m-auto">
+          {{ t('components.balance-panel.no-address-history') }}
+        </h5>
       </div>
 
       <div style="bottom: 1.2rem; right: 1.2rem" class="absolute">
         <span class="pl-4 text-white/30 text-sm">
-          Last <span class="hidden md:inline">Updated</span>
+          {{ t('components.balance-panel.last')
+          }}<span class="hidden md:inline">{{
+            t('components.balance-panel.updated')
+          }}</span>
           {{ walletDetailedSnapshot.lastUpdated.toLocaleTimeString() }}
         </span>
         <button
           class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-red-600/60 hover:bg-green-700 text-white font-medium transition duration-300 ease-in-out"
           @click="clearAccounts(), clearDetailedAccounts()"
         >
-          Clear
+          {{ t('components.balance-panel.clear') }}
         </button>
         <button
           class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-purple-600 hover:bg-green-700 text-white font-medium transition duration-300 ease-in-out"
           @click="getDetailedAccounts()"
         >
-          Update Balances
+          {{ t('components.balance-panel.update-balances') }}
         </button>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
+import { useI18n } from 'vue-i18n'
 import AddressBalanceSingle from '@/components/AddressBalanceSingle.vue'
 import { defineComponent } from 'vue'
 
@@ -65,7 +73,10 @@ export default defineComponent({
   },
 
   setup() {
+    const { t } = useI18n()
+
     return {
+      t,
       getDetailedAccounts,
       clearAccounts,
       clearDetailedAccounts,

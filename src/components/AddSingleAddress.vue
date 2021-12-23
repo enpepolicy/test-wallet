@@ -16,11 +16,11 @@
             class="h-10 px-3 w-90 text-white rounded-lg bg-purple-600 hover:bg-green-700 text-white font-bold transition duration-300 ease-in-out"
             @click.prevent="validateAddress(newAddress)"
           >
-            GET
+            {{ t('components.add-single-address.get') }}
           </button>
         </div>
         <div v-if="!isValidAddress" class="pt-2 text-red-600">
-          Invalid address
+          {{ t('components.add-single-address.invalid-address') }}
         </div>
       </div>
     </div>
@@ -28,11 +28,13 @@
 </template>
 <script lang="ts">
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { truncateAddress } from '@/utils'
 import { getDetailedAccounts, addAddress } from '@/composables/useWallet'
 
 export default {
   setup() {
+    const { t } = useI18n()
     const newAddress = ref('')
     const isValidAddress = ref(true)
 
@@ -46,6 +48,7 @@ export default {
     }
 
     return {
+      t,
       newAddress,
       isValidAddress,
       validateAddress,
