@@ -9,6 +9,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      }
+    }
+  },
   plugins: [
     vue({
       script: {

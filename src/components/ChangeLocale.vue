@@ -8,13 +8,13 @@
     >
       <img
         :class="locale === 'fr' ? 'border-white-800/80 border-4' : ''"
-        src="img/fr.svg"
+        src="/img/fr.svg"
         class="cursor-pointer h-12 cover rounded-lg mr-12 transform hover:scale-125 duration-200 ease-in-out"
         @click="changeLocale('fr')"
       />
       <img
         :class="locale === 'en' ? 'border-white-800/80 border-4' : ''"
-        src="img/gb.svg"
+        src="/img/gb.svg"
         class="cursor-pointer h-12 cover rounded-lg transform hover:scale-125 duration-200 ease-in-out"
         @click="changeLocale('en')"
       />
