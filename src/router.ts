@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, NavigationGuardNext } from 'vue-router'
 import { h, resolveComponent } from 'vue'
 
 const activeLocales = ['en', 'fr']
@@ -23,7 +23,8 @@ const routes = [
             return h(resolveComponent('router-view'))
           }
         },
-        beforeEnter: (to: any, from: any, next: any) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        beforeEnter: (to: any, from: any, next: NavigationGuardNext) => {
           if (activeLocales.includes(to.params.locale)) {
             next()
           } else {

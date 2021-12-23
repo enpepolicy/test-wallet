@@ -1,3 +1,3 @@
 export enum FiatCurrencyEnum {
-  USD = `USDT`
+  USD = `TETHER`
 }
