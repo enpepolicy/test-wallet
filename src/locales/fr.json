@@ -1,0 +1,66 @@
+{
+  "layouts": {
+    "app-bar": {
+      "base-btn": "Contact Us"
+    }
+  },
+  "views": {
+    "sections": {
+      "hero": {
+        "base-heading": "AUCTIONS THAT DONT HAVE NOTHING CLASSIC",
+        "base-body": "Bids&Classics is a cultural community that dynamically promotes the art collecting and the talent of artists, thanks to a technological support that allows us to encourage the diffusion of art by creating a solid bond of trust. Through our auctions, we are able to connect new audiences to an ever-growing international art market.",
+        "base-btn": "Contact Us"
+      },
+      "mobile": {
+        "base-section-heading-title": "The Platform",
+        "base-section-heading-inner-text": "Bids&Classics is a platform that seeks to consolidate art collecting and culture, making available to foundations and cultural enterprises and collectors, a software that can register works of art in the international art market.",
+        "features": [
+          "Online artwork’s exhibition and catalogation",
+          "Art Advisory",
+          "In-Site auctions",
+          "Online silent auctions or Live Stream"
+        ]
+      },
+      "features": {
+        "cards": [
+          {
+            "title": "Hybrid auctions ",
+            "text": "If you’re looking at a complete event, we organize your auction from A to Z. It will be physical and elaborated around silent bids thanks to the collector’s smartphones."
+          },
+          {
+            "title": "Online auction",
+            "text": "We compose the integrality of the online art auction thanks to an unique software, very intuitive and adapted to the challenges of the art market."
+          },
+          {
+            "title": "Solo platform",
+            "text": "You already have the artworks ? You can choose between two options to enjoy our platform : the Silent Auction or the Live Stream, so you can place your brand on the virtual art market. "
+          }
+        ]
+      },
+      "we-help-your-success": {
+        "base-section-heading-title": "The team",
+        "cards": [
+          {
+            "name": "Nicole",
+            "abstract": "Co-founder of Bids & Classics. contactonicoleb@gmail, (+52) 1 55 2406 2913."
+          },
+          {
+            "name": "Adélaïde",
+            "abstract": "Co-founder of Bids & Classics. contactoadelaide@gmail.com, (+52) 55 3953 7088."
+          },
+          {
+            "name": "Enrique",
+            "abstract": "Software Developer of Bids & Classics."
+          }
+        ]
+      },
+      "affiliates": {
+        "base-section-heading-title": "The Allies FRANCE"
+      },
+      "404": {
+        "base-heading": "Looks like this page doesn't exist",
+        "base-btn": "Get me Out of Here"
+      }
+    }
+  }
+}
