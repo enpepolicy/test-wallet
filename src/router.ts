@@ -9,7 +9,7 @@ const routes = [
     path: '/',
     component: () => import('@/layouts/AppIndex.vue'),
     meta: {
-      title: 'ERA2140 Wallet Test'
+      title: 'Wallet Asset Viewer'
     },
     children: [
       {

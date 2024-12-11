@@ -4,5 +4,17 @@ export enum NetworkEnum {
   'ROPSTEN_NET' = 3,
   'RINKEBY_NET' = 4,
   'GOERLY_NET' = 5,
-  'KOVAN_NET' = 42
+  'KOVAN_NET' = 42,
+  'POLYGON_MAINNET' = 137,
+  'POLYGON_MUMBAI' = 80001,
+  'POLYGON_AMOY' = 80002,
+  'BSC_MAINNET' = 56,
+  'BSC_TESTNET' = 97,
+  'ARBITRUM_ONE' = 42161,
+  'ARBITRUM_NOVA' = 42170,
+  'OPTIMISM' = 10,
+  'AVALANCHE_C' = 43114,
+  'FANTOM' = 250,
+  'GNOSIS' = 100,
+  'BASE' = 8453
 }
