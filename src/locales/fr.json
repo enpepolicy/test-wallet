@@ -1,40 +1,40 @@
 {
   "layouts": {
     "app-nav": {
-      "no-chain": "Aucune chaîne connectée"
+      "no-chain": "Aucun réseau blockchain détecté"
     }
   },
   "components": {
     "address-balance-single": {
-      "connected": "connectée"
+      "connected": "Portefeuille actif"
     },
     "add-single-address": {
-      "get": "OBTENIR",
-      "invalid-address": "Adresse Invalide"
+      "get": "SCANNER",
+      "invalid-address": "Format d'adresse invalide"
     },
     "balance-panel": {
-      "address-history": "HISTORIQUE DES ADRESSES",
-      "no-address-history": "PAS D'HISTORIQUE DES ADRESSES",
+      "address-history": "MONITEUR MULTI-CHAÎNES",
+      "no-address-history": "AUCUN PORTEFEUILLE À SURVEILLER",
       "last": "Dernière ",
-      "updated": "Mis à jour",
-      "clear": "Nettoyer",
-      "update-balances": "Mettre à Jour"
+      "updated": "actualisation",
+      "clear": "Vider le moniteur",
+      "update-balances": "Rafraîchir les soldes"
     },
     "change-locale": {
-      "not-your-language-question": "Ce n'est pas votre langue ?"
+      "not-your-language-question": "Changer la langue de l'interface ?"
     },
     "connect-wallet": {
-      "connect-your-wallet": "Connectez Votre Wallet",
-      "connected": "Connectée",
-      "or-enter-an-address": "ou entrez une adresse"
+      "connect-your-wallet": "Connectez Votre Portefeuille",
+      "connected": "Portefeuille Connecté",
+      "or-enter-an-address": "ou saisissez une adresse blockchain"
     }
   },
   "views": {
     "home-section": {
-      "check": "Vérifier",
-      "your-eth-balance": "Votre Solde ETH",
-      "in-differents-chains": "dans différentes chaînes",
-      "compare-your-balance": "Comparez votre solde entre comptes avec notre panel sur mesure !"
+      "check": "Explorez",
+      "your-eth-balance": "Vos Actifs Natifs",
+      "in-differents-chains": "à travers les réseaux (ETH, MATIC, BNB...)",
+      "compare-your-balance": "Visualisez vos soldes et leur valeur en temps réel sur chaque réseau!"
     }
   }
 }

@@ -1,40 +1,40 @@
 {
   "layouts": {
     "app-nav": {
-      "no-chain": "No chain connected"
+      "no-chain": "No blockchain network detected"
     }
   },
   "components": {
     "address-balance-single": {
-      "connected": "connected"
+      "connected": "Active wallet"
     },
     "add-single-address": {
-      "get": "GET",
-      "invalid-address": "Invalid Address"
+      "get": "SCAN",
+      "invalid-address": "Invalid address format"
     },
     "balance-panel": {
-      "address-history": "ADDRESS HISTORY",
-      "no-address-history": "NO ADDRESS HISTORY",
+      "address-history": "MULTI-CHAIN MONITOR",
+      "no-address-history": "NO WALLETS TO TRACK",
       "last": "Last ",
       "updated": "Updated",
-      "clear": "Clear",
-      "update-balances": "Update Balances"
+      "clear": "Clear Monitor",
+      "update-balances": "Refresh Balances"
     },
     "change-locale": {
-      "not-your-language-question": "Not your language?"
+      "not-your-language-question": "Change interface language?"
     },
     "connect-wallet": {
       "connect-your-wallet": "Connect Your Wallet",
-      "connected": "Connected",
-      "or-enter-an-address": "or enter an address"
+      "connected": "Wallet Connected",
+      "or-enter-an-address": "or enter a blockchain address"
     }
   },
   "views": {
     "home-section": {
-      "check": "Check",
-      "your-eth-balance": "Your ETH Balance",
-      "in-differents-chains": "in different chains",
-      "compare-your-balance": "Compare your balance between accounts with our amazing panel"
+      "check": "Explore",
+      "your-eth-balance": "Your Native Assets",
+      "in-differents-chains": "across networks (ETH, MATIC, BNB...)",
+      "compare-your-balance": "Track your balances and their value in real-time on each network!"
     }
   }
 }
