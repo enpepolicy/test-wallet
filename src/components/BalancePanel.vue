@@ -40,18 +40,22 @@
           {{ walletDetailedSnapshot.lastUpdated.toLocaleTimeString() }}
         </span>
         <button
-          class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-red-600/60 hover:bg-green-700 text-white font-medium transition duration-300 ease-in-out"
+          class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-red-600/60 hover:bg-green-700 font-medium transition duration-300 ease-in-out"
           @click="clearAccounts(), clearDetailedAccounts()"
         >
           {{ t('components.balance-panel.clear') }}
         </button>
         <button
-          class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-purple-600 hover:bg-green-700 text-white font-medium transition duration-300 ease-in-out"
+          class="ml-3 h-10 px-3 w-100 text-white rounded-lg bg-purple-600 hover:bg-green-700 font-medium transition duration-300 ease-in-out"
           @click="getDetailedAccounts()"
         >
           {{ t('components.balance-panel.update-balances') }}
         </button>
       </div>
+    </div>
+    <div class="text-right px-2 py-1 text-white/30 text-sm">
+      *{{ t('components.balance-panel.trade-api-info') }}
+      <a href="https://www.coingecko.com" target="_blank" class="underline hover:text-white/50">CoinGecko</a>
     </div>
   </div>
 </template>

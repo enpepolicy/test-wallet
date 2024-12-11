@@ -19,21 +19,24 @@
 
       <div class="flex w-1/2 md:w-1/3 justify-end content-center">
         <span
-          :class="
-            currentNetworkId === 0
-              ? 'bg-gray-600/80 font-regular'
-              : currentNetworkId === 1
-              ? 'bg-yellow-600 font-bold'
-              : 'bg-green-600/90 font-bold'
-          "
-          class="rounded-full my-auto py-2 px-4 text-white mr-3"
+          :class="[
+            'rounded-full my-auto py-2 px-4 text-white mr-3',
+            {
+              'bg-gray-600/80 font-regular': currentNetworkId === 0,
+              'bg-yellow-600 font-bold': currentNetworkId === 1,
+              'bg-purple-600/90 font-bold animate-pulse': isTestnet(currentNetworkId),
+              'bg-green-600/90 font-bold': !isTestnet(currentNetworkId) && currentNetworkId !== 0 && currentNetworkId !== 1
+            }
+          ]"
         >
           {{
             currentNetworkId === 0
               ? t('layouts.app-nav.no-chain')
               : String(NetworkEnum[currentNetworkId]).split('_').join(' ')
           }}
+          {{ isTestnet(currentNetworkId) ? '(Testnet)' : '' }}
         </span>
+
         <!-- <a
           class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
           target="_blank"
@@ -69,7 +72,23 @@ export default defineComponent({
       isImageLoaded.value = true
     }
 
-    return { t, currentNetworkId, NetworkEnum, isImageLoaded, handleImageLoad  }
+    const isTestnet = (networkId: number): boolean => {
+      const testNetworks = [
+        5, // Goerli
+        11155111, // Sepolia
+        80001, // Mumbai (Polygon Testnet)
+        80002, // Amoy (Polygon Testnet)
+        97, // BSC Testnet
+        421613, // Arbitrum Goerli
+        420, // Optimism Goerli
+        43113, // Avalanche Fuji
+        1442, // Polygon zkEVM Testnet
+      ]
+      return testNetworks.includes(networkId)
+    }
+
+
+    return { t, currentNetworkId, NetworkEnum, isImageLoaded, handleImageLoad, isTestnet }
   }
 })
 </script>

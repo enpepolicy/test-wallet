@@ -18,7 +18,8 @@
       "last": "Dernière ",
       "updated": "actualisation",
       "clear": "Vider le moniteur",
-      "update-balances": "Rafraîchir les soldes"
+      "update-balances": "Rafraîchir les soldes",
+      "trade-api-info": "Les soldes sont automatiquement convertis en valeurs monétaires réelles à l'aide des taux de marché en direct de "
     },
     "change-locale": {
       "not-your-language-question": "Changer la langue de l'interface ?"

@@ -18,7 +18,8 @@
       "last": "Last ",
       "updated": "Updated",
       "clear": "Clear Monitor",
-      "update-balances": "Refresh Balances"
+      "update-balances": "Refresh Balances",
+      "trade-api-info": "Balances are automatically converted to real-world currency values using live market rates from "
     },
     "change-locale": {
       "not-your-language-question": "Change interface language?"

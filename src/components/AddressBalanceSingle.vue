@@ -19,7 +19,7 @@
         {{ `${formatPrice(detailedAccount.balanceInEth, 4)} ` }}
         <span class="font-bold">ETH |</span>
         {{ `${formatPrice(detailedAccount.balanceInFiat, 2)} ` }}
-        <span class="font-bold">USDT</span>
+        <span class="font-bold">USD</span>
       </h3>
       <span
         v-if="currentAccount === detailedAccount.address"
